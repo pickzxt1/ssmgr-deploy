@@ -454,7 +454,7 @@ update_nodejs(){
     echo -e "[${green}Info${plain}] Starting to update nodejs EPEL..."
     if check_sys packageManager yum; then
         yum -y remove nodejs > /dev/null 2>&1
-        curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash - > /dev/null 2>&1
+        curl --silent --location https://rpm.nodesource.com/setup_12.x | sudo bash - > /dev/null 2>&1
     elif check_sys packageManager apt; then
         apt-get -y remove nodejs > /dev/null 2>&1
         curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - > /dev/null 2>&1
